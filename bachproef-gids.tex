@@ -1,0 +1,59 @@
+\documentclass[11pt,fleqn,a4paper]{book}
+
+\input{structure}
+
+\begin{document}
+
+%----------------------------------------------------------------------------------------
+%	TITLE PAGE
+%----------------------------------------------------------------------------------------
+
+\begingroup
+\thispagestyle{empty}
+\begin{tikzpicture}[remember picture,overlay]
+\coordinate [below=12cm] (midpoint) at (current page.north);
+\node at (current page.north west)
+{\begin{tikzpicture}[remember picture,overlay]
+\draw[anchor=north] (midpoint) node [fill=hogentblue!30!white,fill opacity=0.6,text opacity=1,inner sep=1cm]{\Huge\centering\bfseries\sffamily\parbox[c][][t]{\paperwidth}{\centering Hoe schrijf je een bachelorproef informatica\\[15pt] % Book title
+{\Large Een praktische gids}\\[20pt] % Subtitle
+{\huge Bert Van Vreckem}}}; 
+\end{tikzpicture}};
+\end{tikzpicture}
+\vfill
+\endgroup
+%----------------------------------------------------------------------------------------
+%----------------------------------------------------------------------------------------
+%	COPYRIGHT PAGE
+%----------------------------------------------------------------------------------------
+
+
+\newpage
+~\vfill
+\thispagestyle{empty}
+
+\noindent Copyright \copyright\ 2016 Bert Van Vreckem\\ % Copyright notice
+
+\noindent \textit{Dit werk valt onder de \href{http://creativecommons.org/licenses/by-sa/4.0/}{Creative Commons Naamsvermelding-GelijkDelen 4.0 Internationale Publieke Licentie}}\\
+
+\noindent \textit{\today} % Printing/edition date
+
+%----------------------------------------------------------------------------------------
+%	TABLE OF CONTENTS
+%----------------------------------------------------------------------------------------
+
+
+\pagestyle{empty} % No headers
+
+\tableofcontents % Print the table of contents itself
+
+\cleardoublepage % Forces the first chapter to start on an odd page so it's on the right
+
+\setlength{\parindent}{0pt}
+
+%----------------------------------------------------------------------------------------
+%	BODY
+%----------------------------------------------------------------------------------------
+
+%\include{les1}
+
+\end{document}

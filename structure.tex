@@ -1,0 +1,307 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% The Legrand Orange Book
+% Structural Definitions File
+% Version 2.0 (9/2/15)
+%
+% Original author:
+% Mathias Legrand (legrand.mathias@gmail.com) with modifications by:
+% Vel (vel@latextemplates.com)
+% 
+% This file has been downloaded from:
+% http://www.LaTeXTemplates.com
+%
+% License:
+% CC BY-NC-SA 3.0 (http://creativecommons.org/licenses/by-nc-sa/3.0/)
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%----------------------------------------------------------------------------------------
+%	VARIOUS REQUIRED PACKAGES AND CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+\usepackage{pgfplotstable}
+\usepackage{pgfplots}
+\usepackage{tikz}
+\usepackage[top=3cm,bottom=3cm,left=3cm,right=3cm,headsep=10pt,a4paper]{geometry} % Page margins
+\usepackage{graphicx} % Required for including pictures
+\graphicspath{{./images/}} % Specifies the directory where pictures are stored
+\usepackage{tikz} % Required for drawing custom shapes
+\usepackage[dutch]{babel} % English language/hyphenation
+\usepackage{paralist}
+\usepackage{enumitem} % Customize lists
+\setlist{nolistsep} % Reduce spacing between bullet points and numbered lists
+\usepackage{booktabs} % Required for nicer horizontal rules in tables
+\usepackage{xcolor} % Required for specifying colors by name
+\usepackage{hyperref}
+\definecolor{hogentblue}{RGB}{0,111,184} % Define the orange color used for highlighting throughout the book
+
+
+%----------------------------------------------------------------------------------------
+%	FONTS
+%----------------------------------------------------------------------------------------
+
+\usepackage{avant} % Use the Avantgarde font for headings
+%\usepackage{times} % Use the Times font for headings
+\usepackage{mathptmx} % Use the Adobe Times Roman as the default text font together with math symbols from the Sym­bol, Chancery and Com­puter Modern fonts
+\usepackage{microtype} % Slightly tweak font spacing for aesthetics
+\usepackage[utf8]{inputenc} % Required for including letters with accents
+\usepackage[T1]{fontenc} % Use 8-bit encoding that has 256 glyphs
+
+%----------------------------------------------------------------------------------------
+%	BIBLIOGRAPHY AND INDEX
+%----------------------------------------------------------------------------------------
+
+
+\usepackage{calc} % For simpler calculation - used for spacing the index letter headings correctly
+\usepackage{makeidx} % Required to make an index
+\makeindex % Tells LaTeX to create the files required for indexing
+
+%----------------------------------------------------------------------------------------
+%	MAIN TABLE OF CONTENTS
+%----------------------------------------------------------------------------------------
+
+\usepackage{titletoc} % Required for manipulating the table of contents
+
+% Chapter text styling
+\titlecontents{chapter}[1.25cm] % Indentation
+{\addvspace{12pt}\large\sffamily\bfseries} % Spacing and font options for chapters
+{\color{hogentblue!60}\contentslabel[\Large\thecontentslabel]{1.25cm}\color{hogentblue}} % Chapter number
+{\color{hogentblue}}  
+{\color{hogentblue!60}\normalsize\;\titlerule*[.5pc]{.}\;\thecontentspage} % Page number
+
+% Section text styling
+\titlecontents{section}[1.25cm] % Indentation
+{\addvspace{3pt}\sffamily\bfseries} % Spacing and font options for sections
+{\contentslabel[\thecontentslabel]{1.25cm}} % Section number
+{}
+{\hfill\color{black}\thecontentspage} % Page number
+[]
+
+% Subsection text styling
+\titlecontents{subsection}[1.25cm] % Indentation
+{\addvspace{1pt}\sffamily\small} % Spacing and font options for subsections
+{\contentslabel[\thecontentslabel]{1.25cm}} % Subsection number
+{}
+{\ \titlerule*[.5pc]{.}\;\thecontentspage} % Page number
+[]
+
+% Chapter text styling
+\titlecontents{lchapter}[0em] % Indenting
+{\addvspace{15pt}\large\sffamily\bfseries} % Spacing and font options for chapters
+{\color{hogentblue}\contentslabel[\Large\thecontentslabel]{1.25cm}\color{ocre}} % Chapter number
+{}  
+{\color{hogentblue}\normalsize\sffamily\bfseries\;\titlerule*[.5pc]{.}\;\thecontentspage} % Page number
+
+% Section text styling
+\titlecontents{lsection}[0em] % Indenting
+{\sffamily\small} % Spacing and font options for sections
+{\contentslabel[\thecontentslabel]{1.25cm}} % Section number
+{}
+{}
+
+% Subsection text styling
+\titlecontents{lsubsection}[.5em] % Indentation
+{\normalfont\footnotesize\sffamily} % Font settings
+{}
+{}
+{}
+\usepackage{fancyhdr} % Required for header and footer configuration
+\pagestyle{fancy}
+\renewcommand{\chaptermark}[1]{\markboth{\sffamily\normalsize\bfseries\chaptername\ \thechapter.\ #1}{}} % Chapter text font settings
+\renewcommand{\sectionmark}[1]{\markright{\sffamily\normalsize\thesection\hspace{5pt}#1}{}} % Section text font settings
+\fancyhf{} \fancyhead[LE,RO]{\sffamily\normalsize\thepage} % Font setting for the page number in the header
+\fancyhead[LO]{\rightmark} % Print the nearest section name on the left side of odd pages
+\fancyhead[RE]{\leftmark} % Print the current chapter name on the right side of even pages
+\renewcommand{\headrulewidth}{0.5pt} % Width of the rule under the header
+\addtolength{\headheight}{2.5pt} % Increase the spacing around the header slightly
+\renewcommand{\footrulewidth}{0pt} % Removes the rule in the footer
+\fancypagestyle{plain}{\fancyhead{}\renewcommand{\headrulewidth}{0pt}} % Style for when a plain pagestyle is specified
+
+% Removes the header from odd empty pages at the end of chapters
+\makeatletter
+\renewcommand{\cleardoublepage}{
+\clearpage\ifodd\c@page\else
+\hbox{}
+\vspace*{\fill}
+\thispagestyle{empty}
+\newpage
+\fi}
+
+\makeatletter
+\renewcommand{\@seccntformat}[1]{\llap{\textcolor{hogentblue}{\csname the#1\endcsname}\hspace{1em}}}                    
+\renewcommand{\section}{\@startsection{section}{1}{\z@}
+{-4ex \@plus -1ex \@minus -.4ex}
+{1ex \@plus.2ex }
+{\normalfont\large\sffamily\bfseries}}
+\renewcommand{\subsection}{\@startsection {subsection}{2}{\z@}
+{-3ex \@plus -0.1ex \@minus -.4ex}
+{0.5ex \@plus.2ex }
+{\normalfont\sffamily\bfseries}}
+\renewcommand{\subsubsection}{\@startsection {subsubsection}{3}{\z@}
+{-2ex \@plus -0.1ex \@minus -.2ex}
+{.2ex \@plus.2ex }
+{\normalfont\small\sffamily\bfseries}}                        
+\renewcommand\paragraph{\@startsection{paragraph}{4}{\z@}
+{-2ex \@plus-.2ex \@minus .2ex}
+{.1ex}
+{\normalfont\small\sffamily\bfseries}}
+
+
+\newcommand{\chapterimage}[1]{\renewcommand{\thechapterimage}{#1}}%
+\def\@makechapterhead#1{%
+{\parindent \z@ \raggedright \normalfont
+\ifnum \c@secnumdepth >\m@ne
+\if@mainmatter
+\begin{tikzpicture}[remember picture,overlay]
+\node at (current page.north west)
+{\begin{tikzpicture}[remember picture,overlay]
+\draw[anchor=west] (\Gm@lmargin,-9cm) node [line width=2pt,rounded corners=15pt,draw=hogentblue,fill=white,fill opacity=0.5,inner sep=15pt]{\strut\makebox[22cm]{}};
+\draw[anchor=west] (\Gm@lmargin+.3cm,-9cm) node {\huge\sffamily\bfseries\color{black}\thechapter. #1\strut};
+\end{tikzpicture}};
+\end{tikzpicture}
+\else
+\begin{tikzpicture}[remember picture,overlay]
+\node at (current page.north west)
+{\begin{tikzpicture}[remember picture,overlay]
+\node[anchor=north west,inner sep=0pt] at (0,0) {\includegraphics[width=\paperwidth]{\thechapterimage}};
+\draw[anchor=west] (\Gm@lmargin,-9cm) node [line width=2pt,rounded corners=15pt,draw=hogentblue,fill=white,fill opacity=0.5,inner sep=15pt]{\strut\makebox[22cm]{}};
+\draw[anchor=west] (\Gm@lmargin+.3cm,-9cm) node {\huge\sffamily\bfseries\color{black}#1\strut};
+\end{tikzpicture}};
+\end{tikzpicture}
+\fi\fi\par\vspace*{270\p@}}}
+
+%----------------------------------------------------------------------------------------
+%	Symboldefinitions
+%----------------------------------------------------------------------------------------
+\usepackage{amsmath,amsfonts,amssymb,amsthm}
+\renewcommand{\qedsymbol}{$\blacksquare$}% Optional qed square
+
+
+
+
+
+%----------------------------------------------------------------------------------------
+%	PAGE HEADERS
+%----------------------------------------------------------------------------------------
+
+\usepackage{fancyhdr} % Required for header and footer configuration
+
+\pagestyle{fancy}
+\renewcommand{\chaptermark}[1]{\markboth{\sffamily\normalsize\bfseries\chaptername\ \thechapter.\ #1}{}} % Chapter text font settings
+\renewcommand{\sectionmark}[1]{\markright{\sffamily\normalsize\thesection\hspace{5pt}#1}{}} % Section text font settings
+\fancyhf{} \fancyhead[LE,RO]{\sffamily\normalsize\thepage} % Font setting for the page number in the header
+\fancyhead[LO]{\rightmark} % Print the nearest section name on the left side of odd pages
+\fancyhead[RE]{\leftmark} % Print the current chapter name on the right side of even pages
+\renewcommand{\headrulewidth}{0.5pt} % Width of the rule under the header
+\addtolength{\headheight}{2.5pt} % Increase the spacing around the header slightly
+\renewcommand{\footrulewidth}{0pt} % Removes the rule in the footer
+\fancypagestyle{plain}{\fancyhead{}\renewcommand{\headrulewidth}{0pt}} % Style for when a plain pagestyle is specified
+
+% Removes the header from odd empty pages at the end of chapters
+\makeatletter
+\renewcommand{\cleardoublepage}{
+\clearpage\ifodd\c@page\else
+\hbox{}
+\vspace*{\fill}
+\thispagestyle{empty}
+\newpage
+\fi}
+
+
+%----------------------------------------------------------------------------------------
+%	ENVIRONMENTS
+%----------------------------------------------------------------------------------------
+\RequirePackage[framemethod=default]{mdframed}
+
+\newcounter{dummy} 
+\newtheorem{theoremeT}[dummy]{Stelling}
+\newtheorem{problem}{Probleem}[chapter]
+\newtheorem{exerciseT}{Oefening}[chapter]
+\newtheorem{exampleT}{Voorbeeld}[chapter]
+\newtheorem{definitionT}{Definitie}[section]
+
+
+
+% Theorem box
+\newmdenv[skipabove=7pt,
+skipbelow=7pt,
+backgroundcolor=black!5,
+linecolor=hogentblue,
+innerleftmargin=5pt,
+innerrightmargin=5pt,
+innertopmargin=5pt,
+leftmargin=0cm,
+rightmargin=0cm,
+innerbottommargin=5pt,
+skipbelow=2pt,
+skipabove=2pt]{tBox}
+
+
+\newmdenv[
+skipabove=7pt,
+skipbelow=7pt,
+backgroundcolor=black!10,
+rightline=false,
+leftline=true,
+topline=false,
+bottomline=false,
+linecolor=hogentblue,
+innerleftmargin=5pt,
+innerrightmargin=5pt,
+innertopmargin=0pt,
+leftmargin=0cm,
+rightmargin=0cm,
+linewidth=4pt,
+innerbottommargin=0pt
+]{definitionstyle}
+
+\newmdenv[%
+skipabove=7pt,
+skipbelow=7pt,
+rightline=false,
+leftline=true,
+topline=false,
+bottomline=false,
+linecolor=gray,
+backgroundcolor=black!10,
+innerleftmargin=5pt,
+innerrightmargin=5pt,
+innertopmargin=5pt,
+leftmargin=0cm,
+rightmargin=0cm,
+linewidth=4pt,
+innerbottommargin=5pt
+]{examplestyle}
+
+\newmdenv[%
+skipabove=7pt,
+skipbelow=7pt,
+rightline=true,
+leftline=true,
+topline=true,
+bottomline=true,
+linecolor=gray,
+backgroundcolor=black!10,
+innerleftmargin=5pt,
+innerrightmargin=5pt,
+innertopmargin=5pt,
+leftmargin=0cm,
+rightmargin=0cm,
+linewidth=1pt,
+innerbottommargin=5pt
+]{excersisestyle}
+
+
+\newenvironment{definition}{\begin{definitionstyle}\begin{definitionT}}{\hfill{\tiny\ensuremath{\blacksquare}}\end{definitionT}\end{definitionstyle}}	
+\newenvironment{example}{\begin{examplestyle}\begin{exampleT}}{\hfill{\tiny\ensuremath{\blacksquare}}\end{exampleT}\end{examplestyle}}	
+\newenvironment{exercise}{\begin{excersisestyle}\begin{exerciseT}}{\hfill{}\end{exerciseT}\end{excersisestyle}}	
+\newenvironment{theorem}{\begin{definitionstyle}\begin{theoremeT}}{\hfill{\tiny\ensuremath{\blacksquare}}\end{theoremeT}\end{definitionstyle}}	
+
+
+% ---- MATH STUFF ----
+
+\pgfmathdeclarefunction{gauss}{2}{%
+  \pgfmathparse{1/(#2*sqrt(2*pi))*exp(-((x-#1)^2)/(2*#2^2))}%
+}
+
+%\pgfplotsset{compat=1.11}
