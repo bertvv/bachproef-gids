@@ -17,6 +17,7 @@ Word (zeker standaardsjabloon) geeft een layout die niet geschikt is voor public
 
 ## Literatuuronderzoek
 
+- Cursus informatievaardigheden HoGent bib
 - bibliografische databank
     - BibTeX tips: {} voor familienaam en bedrijfsnaam; online bronnen; ...
 - bronnen zoeken
@@ -42,6 +43,7 @@ Word (zeker standaardsjabloon) geeft een layout die niet geschikt is voor public
 
 - Vergelijkende studie
 - Experimenten opzetten
+- Rapporteren over performantie (en ander cijfermateriaal)
 - Enquète
 
 ## De scriptie schrijven
@@ -57,7 +59,9 @@ Onderwerp ten gronde uitspitten
 
 Geen vage kwalificaties: lang, groot, snel, populair, ... Quantificeer je uitspraken met cijfers en meeteenheden!
 
-## Vorm en taal
+Alle beweringen in een thesis (dus ihb ook in een bachelorproef) moeten onderbouwd zijn, hetzij aan de hand van referenties naar gezaghebbende literaire bronnen, hetzij aan de hand van eigen ontwikkelde kennis, op basis van methodologisch correct verzamelde en geanalyseerde data.
+
+### Vorm en taal
 
 - Huisstijl HoGent
 - Taal en tikfouten
@@ -66,18 +70,20 @@ Geen vage kwalificaties: lang, groot, snel, populair, ... Quantificeer je uitspr
   We raden af om een tekstverwerker (MS Office, LibreOffice, enz.) te gebruiken. Een tekstverwerker is niet geschikt voor het opmaken van langere teksten en laat te veel vrijheid in opmaak. Het gevolg is vaak een lelijk document dat niet consistent is opgemaakt, met ontbrekende elementen (pagina- en titelnummering, enz.). Dit veroorzaakt ergernis bij de lezer die automatisch een minder positieve perceptie heeft over je tekst...
 - Algemene richtlijnen: basislettertype, koptitels (kleur), gebruik van stijlen, rechtermarge, interlinie (geen harde returns of pagina-eindes)
 - Afbeeldingen: bijschrift, verwijzen vanuit de tekst, logo's, witruimte onderaan vermijden
+- Thesis is verslag van uitgevoerd onderzoek. Toekomstige tijd past daar niet bij. Verleden tijd is beter. "Eerst zal gekeken worden naar ..." -> "We hebben eerst onderzocht ..."
+- Professionele schrijfstijl, vermijden ik-vorm
+- Vermijd passieve zinnen, die maken de tekst vager en dubbelzinniger.
+- Elk hoofdstuk een inleidende paragraaf die aangeeft wat er besproken wordt en hoe het zich verhoudt tov het vorige.
+- Conclusie, samenvatting, voorwoord schrijf je het laatste maar het is vaak het eerste dat gelezen wordt. Bijzonder veel aandacht aan schenken
+    - Conclusie moet terug grijpen op de onderzoeksvraag
+    - Bedenkingen, future work
+    - Samenvatting is geen voorwoord. Moet maw. ook belangrijkste conclusies bevatten
 
-Thesis is verslag van uitgevoerd onderzoek. Toekomstige tijd past daar niet bij. Verleden tijd is beter. "Eerst zal gekeken worden naar ..." -> "We hebben eerst onderzocht ..."
-
-Vermijd passieve zinnen, die maken de tekst vager en dubbelzinniger.
-
-Elk hoofdstuk een inleidende paragraaf die aangeeft wat er besproken wordt en hoe het zich verhoudt tov het vorige.
-
-## Afbeeldingen
+### Afbeeldingen
 
 - hoge resolutie screenshotsi (van webpagina): http://brandonmathis.com/blog/2010/10/08/how-to-get-high-resolution-screenshots-of-a-website
 
-## Specialiteiten
+### Specialiteiten
 
 - index
 - woordenlijsten: acro-package
