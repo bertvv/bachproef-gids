@@ -1,0 +1,75 @@
+\chapter{Onderzoeksmethoden}
+\label{ch:onderzoeksmethoden}
+
+In dit onderwerp vind je aanbevelingen in verband met een aantal vaak gebruikte onderzoeksmethoden. Meer bepaald bespreken we de aanpak van een vergelijkende studie, hoe je correct experimenten opzet en hoe je op een correcte manier rapporteert over bekomen resultaten (in het bijzonder cijfermateriaal).
+
+\section{De vergelijkende studie}
+\label{sec:vergelijkende-studie}
+
+Een type onderwerp dat vaak gekozen wordt voor een bachelorproef is een vergelijkende studie. Je bent op zoek naar een oplossing voor een probleem in de vorm van een software- of hardware-product, platform, dienst, enz. De bedoeling van de studie is om alle mogelijke alternatieven naast elkaar te zetten en een keuze te maken over de meest geschikte.
+
+De ervaring leert dat een vergelijkende studie pas echt goed is als er een concreet doel is, een reële situatie waar de geselecteerde oplossing ook werkelijk zal toegepast worden. Het gevaar bestaat dat de studie zich beperkt tot het achter elkaar opsommen van enkele arbitrair gekozen mogelijkheden. Er volgt een paragraafje uitleg, soms gewoon van Wikipedia gehaald, met een opsomming van wat voor- en nadelen, maar niet gestructureerd en zonder rode draad. Een bepaald aspect als ``gebruiksvriendelijkheid'' wordt dan bijvoorbeeld in één product besproken, maar niet voor de andere, enz. De eigen inbreng is dan miniem: een dagje zoeken op Wikipedia, samenvatten of verder uitschrijven, klaar. Dit is op zich dus onvoldoende.
+
+Maar hoe pak je het dan \emph{wel} aan?
+
+Laat ons veronderstellen dat je na je afstuderen aan de slag wil als webontwikkelaar, en je bent op zoek naar een geschikt PHP-framework om je websites mee te bouwen.
+
+\subsection{Requirements-analyse}
+\label{ssec:requirements-analyse}
+
+Om een goede keuze te maken begin je met het verzamelen van \emph{requirements}, zowel \textit{functionele} als \emph{niet-functionele}, bijvoorbeeld:
+
+\begin{itemize}
+\item Functionele requirements
+  \begin{itemize}
+  \item Ondersteuning voor HTML5/CSS3
+  \item Responsive design
+  \item Er moet een authenticatiemodule in zitten dat OpenID, Facebook- en Google-authenticatie ondersteunt
+  \item \ldots
+  \end{itemize}
+\item Niet-functionele requirements
+  \begin{itemize}
+  \item Moet bestand zijn tegen de top-10 beveiligingsproblemen van OWASP\footnote{\url{https://www.owasp.org/index.php/Category:OWASP_Top_Ten_Project}}
+  \item Wachtwoorden worden opgeslagen volgens de state-of-the art (\emph{salted} en \emph{hashed})
+  \item Moet open source zijn
+  \item Moet gratis zijn
+  \item \ldots
+  \end{itemize}
+\end{itemize}
+
+Als je het onderzoek doet voor een ``klant'' (= je co-promotor), dan betrek je uiteraard alle belanghebbenden bij dit proces! Je lijst de requirements op en verdeelt ze onder naar belangrijkheid, bijvoorbeeld via de MoSCoW-techniek\footnote{\url{http://en.wikipedia.org/wiki/MoSCoW_Method}}. Je verdeelt de requirements dan in categorieën zoals ``must-have'', ``should-have'' en ``nice-to-have''.
+
+\subsection{Long list}
+\label{ssec:long-list}
+
+Dan zoek je \emph{zoveel mogelijk} alternatieven die in aanmerking komen om gebruikt te worden, m.a.w.~al diegenen die je kan vinden. Je noemt ze in deze \emph{long list} (die soms kan bestaan uit tientallen alternatieven) bij naam, met eventueel vermelding van een website en een beschrijving in één zin. Elk alternatief toets je af aan de requirements, voor zover dit al mogelijk is aan de hand van informatie die je op de website vindt of via andere bronnen. Zaken die je niet kan verifiëren laat je gewoon open om later na te kijken of misschien zelfs te negeren (als het bv.~gaat om een onbelangrijke feature, of als verschillende andere must-haves niet voldaan zijn). Je sorteert de long list dan volgens het aantal voldane requirements, en maakt hier een overzichtelijke tabel van. Hopelijk heb je een aantal alternatieven overgehouden die voldoen aan alle must-haves en zoveel mogelijk should-haves en nice-to-haves.
+
+\subsection{Short list en proof-of-concept}
+\label{ssec:short-list-poc}
+
+ De meest veelbelovende alternatieven weerhoud je voor de volgende fase. De alternatieven in deze \emph{short list} ga je in meer detail bespreken en verder tegenover elkaar afwegen. Zet eventueel een \emph{proof-of-concept} op, waarin je één of enkele van de meest veelbelovende alternatieven uitprobeert aan de hand van eenzelfde vastgelegd \emph{scenario} waarin je de requirements die je nog niet hebt kunnen verifiëren aan bod laat komen.
+
+\subsection{Conclusie}
+\label{ssec:vgl-studie-conclusie}
+
+Tenslotte geef je je \emph{aanbeveling}, het alternatief dat het beste aansluit bij de requirements, en wat eventueel nog moet gedaan worden om het nog beter geschikt te maken.
+
+\section{Experimenten opzetten}
+\label{sec:experimenten-opzetten}
+
+% TODO
+% Belangrijk: reproduceerbaar aan de hand van de beschrijving
+% => voldoende detail om te kunnen nabootsen
+% Gebruikte hardware, software
+% Procedure opzetten testomgeving (afbeelding!)
+
+\section{Cijfermateriaal rapporteren}
+\label{sec:cijfermateriaal}
+
+% TODO
+% vb. performantievergelijking
+% - vergelijk je de juiste dingen? Zijn neveneffecten uitgeschakeld?
+% - Experimenten vele keren herhalen
+% - Enkel gemiddeldes vermelden is onvoldoende! Minstens ook standaardafwijkingen geven en statistische toetsen uitvoeren om te verifiëren of resultaten significant verschillen.
+
+
