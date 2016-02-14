@@ -171,3 +171,6 @@ TSWLatexianTemp*
 
 # KBibTeX
 *~*
+
+# Vim-LaTeX
+*.latexmain
