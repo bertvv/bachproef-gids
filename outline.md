@@ -15,30 +15,6 @@
 
 Word (zeker standaardsjabloon) geeft een layout die niet geschikt is voor publicatie. Inconsistente layout, paginanummering, ... Tekst kopiëren uit ander (voorbereidend) document neemt oorspronkelijke layout over, wat niet consistent is met deze van het document. WYSIWYG-principe leidt af van de kern van de zaak: content! Je kan Word niet in versiebeheer steken. Resultaat: verschillende "versies" naast elkaar ("bachproef 3" "bachproef 5 30 maart" "final draft" "final draft na feedback" "final final draft", ...)
 
-## Literatuuronderzoek
-
-- Cursus informatievaardigheden HoGent bib
-- bibliografische databank
-    - BibTeX tips: {} voor familienaam en bedrijfsnaam; online bronnen; ...
-- bronnen zoeken
-- kwaliteit van bronnen evalueren
-  - criteria
-  - bronnen die zeker niet in aanmerking komen: Wikipedia (of andere encyclopedie), webpagina van onbekende auteur/publicatiedatum
-- bronnen gebruiken en er naar verwijzen, toepassing in Mendeley en JabRef
-  - Wetenschappelijk artikel
-  - Vaktijdschrift
-  - Boek
-  - Thesis (doctoraat, master, bachelor)
-  - Hoofdstuk in boek (bv. elk hst andere auteur)
-  - Blog-artikel
-  - Presentatie op conferentie, video
-  - Handleiding software
-  - White paper
-  - Webpagina
-- literatuurstudie schrijven
-  - verwijzingen in de tekst
-  - literatuurlijst
-
 ## Onderzoeksmethoden
 
 - Vergelijkende studie
@@ -47,6 +23,8 @@ Word (zeker standaardsjabloon) geeft een layout die niet geschikt is voor public
 - Enquète
 
 ## De scriptie schrijven
+
+(beter voor inleiding?)
 
 - Structuur, outline
 - Literatuurstudie
@@ -59,7 +37,6 @@ Onderwerp ten gronde uitspitten
 
 Geen vage kwalificaties: lang, groot, snel, populair, ... Quantificeer je uitspraken met cijfers en meeteenheden!
 
-Alle beweringen in een thesis (dus ihb ook in een bachelorproef) moeten onderbouwd zijn, hetzij aan de hand van referenties naar gezaghebbende literaire bronnen, hetzij aan de hand van eigen ontwikkelde kennis, op basis van methodologisch correct verzamelde en geanalyseerde data.
 
 ### Vorm en taal
 
