@@ -2,30 +2,17 @@
 
 \input{structure}
 
+\newcommand{\acadj}{2016-2017}
+
+\author{Bert Van Vreckem}
+\title{De bachelorproef informatica\\Een praktische gids}
+\date{Academiejaar \acadj}
+
 \begin{document}
 
-%----------------------------------------------------------------------------------------
-%	TITLE PAGE
-%----------------------------------------------------------------------------------------
+\thetitlepage
 
-\begingroup
-\thispagestyle{empty}
-\begin{tikzpicture}[remember picture,overlay]
-\coordinate [below=12cm] (midpoint) at (current page.north);
-\node at (current page.north west)
-{\begin{tikzpicture}[remember picture,overlay]
-\draw[anchor=north] (midpoint) node [fill=hogentblue!30!white,fill opacity=0.6,text opacity=1,inner sep=1cm]{\Huge\centering\bfseries\sffamily\parbox[c][][t]{\paperwidth}{\centering Hoe schrijf je een bachelorproef informatica\\[15pt] % Book title
-{\Large Een praktische gids}\\[20pt] % Subtitle
-{\huge Bert Van Vreckem}}};
-\end{tikzpicture}};
-\end{tikzpicture}
-\vfill
-\endgroup
-%----------------------------------------------------------------------------------------
-%----------------------------------------------------------------------------------------
-%	COPYRIGHT PAGE
-%----------------------------------------------------------------------------------------
-
+%---------- Colofon -----------------------------------------------------------
 
 \newpage
 ~\vfill
@@ -37,18 +24,14 @@
 
 \noindent \textit{\today} % Printing/edition date
 
-%----------------------------------------------------------------------------------------
-%	TABLE OF CONTENTS
-%----------------------------------------------------------------------------------------
+%---------- Inhoudstafel ------------------------------------------------------
+\usechapterimagefalse
 
 \tableofcontents % Print the table of contents itself
 
 \cleardoublepage % Forces the first chapter to start on an odd page so it's on the right
 
-%----------------------------------------------------------------------------------------
-%	BODY
-%----------------------------------------------------------------------------------------
-
+%---------- Corpus ------------------------------------------------------------
 \include{inleiding}
 \include{voorbereiding}
 \include{onderwerp}
@@ -56,8 +39,10 @@
 \include{onderzoeksmethoden}
 \include{schrijven}
 
-\bibliographystyle{apacite}
-\bibliography{bachproef-gids}
+
+%---------- Back matter -------------------------------------------------------
+\printbibliography
+\addcontentsline{toc}{chapter}{\textcolor{maincolor}{\IfLanguageName{dutch}{Bibliografie}{Bibliography}}}
 
 \end{document}
 
