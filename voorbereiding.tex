@@ -3,12 +3,6 @@
 
 In dit hoofdstuk behandelen we het opstarten van het werk aan een bachelorproef. Je vindt er enkele aanbevelingen over te gebruiken tools en het onderzoeksproces.
 
-\section{Versiebeheersysteem}
-\label{sec:versiebeheersysteem}
-
-% Gebruik een versiebeheersysteem zoals Git
-% -> Github of Bitbucket om remote een
-
 \section{Gebruik van {\LaTeX}}
 \label{sec:gebruik-van-latex}
 
@@ -16,20 +10,66 @@ De meeste studenten zijn gewend om opgemaakte tekst met een klassieke tekstverwe
 
 Word, zeker met het standaardsjabloon, geeft een layout die niet geschikt is voor publicatie. Eens de lengte en complexiteit van een Word-document toenemen (en bij een eindwerk is dat zeker het geval), krijg je te maken met inconsistenties in de layout van je tekst, paginanummering, slecht gepositioneerde afbeeldingen, enz.
 
-Wanneer je tekst kopieert vanuit een ander (voorbereidend) document, wordt de oorspronkelijke layout overgenomen. Als die niet consistent is met deze van je hoofddocument, moet je alles gaan aanpassen.
+Wanneer je tekst kopieert vanuit een ander (voorbereidend) document of vanuit een website, wordt de oorspronkelijke layout overgenomen. Als die niet consistent is met deze van je hoofddocument, moet je alles gaan aanpassen.
 
 Een klassieke tekstverwerker die gebaseerd is op het WYSIWYG-principe\footnote{\emph{What You See Is What You Get}, zoals je wellicht weet}, laat je toe om tot in de puntjes te bepalen waar tekst op het papier terecht komt, maar in dit geval is dat te veel vrijheid. Een strakke en professionele vormgeving is een specialiteit die een grote aandacht voor vaak pietluttige  details vraagt. Als informaticus hebben wij niet de nodige kennis om dit te realiseren. Wanneer je een significant deel van de tijd bezig bent met het vormgeven van je document, word je bovendien afgeleid van de kern van de zaak: de inhoud van de tekst!
 
-% Word kan niet in versiebeheer => verschillende versies vh document naast elkaar
-% ("bachproef 3" "bachproef 5 30 maart" "final draft" "final draft na feedback" "final final draft", ...)
+Een ander nadeel van de klassieke tekstverwerker is het binaire bestandsformaat. Dit maakt het onmogelijk om een document in een versiebeheersysteem te steken (zie Sectie~\ref{sec:versiebeheersysteem}). Al gauw gaan er verschillende versies van het document naast elkaar leven: `bachproef 3.docx', `bachproef 5 30 maart.docx', `final draft.docx', `final draft na feedback.docx', `final final draft.docx', enz. Je hebt versies op je laptop, op dropbox, op je vaste pc, in je mailbox, enz. Op de duur is het overzicht zoek, vergeet je stukken tekst over te nemen of maak je andere fouten.
 
-% LaTeX is een tekstzetsysteem met markuptaal (vgl HTML) die gespecialiseerd is in het op papier zetten van tekst met een professionele layout. Schrijf broncode in LaTeX markup, compiler genereert PDF.
-% LaTeX is tekstgebaseerd, dus je kan dit in een versiebeheersysteem steken (zie vorige sectie).
+Voor het opmaken van een lange tekst met een professionele en strakke vormgeving is {\LaTeX} een aanrader. Zoals je weet is dit een \emph{tekstzetsysteem} met een markuptaal (zoals HTML) die gespecialiseerd is in het op papier zetten van tekst. Je schrijft broncode in LaTeX markup, een `compiler' genereert een PDF. {\LaTeX} is tekstgebaseerd, dus je kan dit in een versiebeheersysteem steken.
+
+{\LaTeX} heeft wel enkele nadelen. Er is een niet te onderschatten leercurve, en zolang je vast houdt aan de gewoonten die je overgehouden hebt aan het werken met een tekstverwerker, doet {\LaTeX} niet altijd wat je verwacht. Maar je moet de meeste inspanning leveren in het begin, om {\LaTeX} onder de knie te krijgen. Bij het schrijven van een bachelorproef met een tekstverwerker heb je het meeste werk op het einde, om alle onvolkomenheden, inconsistenties en fouten in de vormgeving weg te werken. Op dat moment heb je daar meestal niet veel tijd meer voor, want de deadline nadert. Het gevolg is meestal een document dat onvoldoende afgewerkt is en er heel onprofessioneel uitziet voor de lezer.
 
 In de rest van deze gids gaan we er van uit dat je {\LaTeX} gebruikt. Het is niet de bedoeling dat dit een {\LaTeX} handleiding wordt, daarvoor zijn er voldoende andere bronnen beschikbaar~\autocite{Oetiker2015}.
 
+Je kan een {\LaTeX}-sjabloon voor het opmaken van de bachelorproef vinden op de Github repository \url{https://github.com/HoGentTIN/bachproef-latex-sjabloon}. Via de groene knop rechtsboven kan je het sjabloon downloaden. De repository klonen of een fork aanmaken is niet aan te raden, de historiek van het sjabloon is niet relevant voor jouw werk.
+
+%% TODO:
+% Installeren
+% - MikTeX
+% - LaTeX editor
+
 \section{Bibliografische databank}
 \label{sec:bibliografische-databank}
+
+Een vast onderdeel van een bachelorproef is het voeren van een literatuurstudie om je in te werken in het onderzoeksdomein (zie Hoofdstuk~\ref{ch:literatuuronderzoek}). Het is belangrijk om goed bij te houden wat je allemaal leest, zodat je bij het schrijven van de inleiding kan verwijzen naar je bronnen. Het verwijzen naar bronnen en opmaken van een bibliografie moet op een strakke, strikt vastgelegde manier gebeuren. Dit is iets dat je niet manueel hoeft te doen, er bestaan verschillende softwarepakketten die dit grotendeels automatiseren: bibliografische databanken.
+
+Een bibliografische databank laat je toe metadata over de gelezen werken gestructureerd bij te houden: titel, auteur, jaartal, en dergelijke, maar ook (aanklikbare) URLs, PDFs van artikels, nota's, enz.
+
+Er zijn verschillende mogelijkheden, maar JabRef is wellicht de interessantste. JabRef (\url{http://www.jabref.org/}) is een open source bibliografische databank geschreven in Java en bij uitstek geschikt voor het werken met {\LaTeX}. Het gebruikt als bestandsformaat hetzelfde als Bib{\TeX}, het in {\LaTeX} ingebouwde systeem voor bibliografieën.
+
+Na installeren pas je best volgende instellingen aan:
+
+\begin{itemize}
+  \item File > Switch to BibLaTeX Mode;
+  \item Options > Preferences
+    \begin{itemize}
+      \item General: Date form: `yyyy-MM-dd' (standaard is met punten)
+      \item File: Main file directory. Stel dit in op de directory waar je al je PDFs van gelezen artikels gaat bijhouden. Dit maakt het makkelijk om vanuit JabRef vanaf het record van een artikel door te klikken naar de PDF.
+      \item External programs: hier kan je eventueel verwijzen naar je {\LaTeX} editor.
+    \end{itemize}
+\end{itemize}
+
+\section{Versiebeheersysteem}
+\label{sec:versiebeheersysteem}
+
+Aan een informaticus hoeven hopelijk de voordelen van een versiebeheersysteem niet uitgelegd te worden?
+% Gebruik een versiebeheersysteem zoals Git
+% -> Github of Bitbucket om remote een
+% Wat komt in Git:
+% - LaTeX, BibTeX broncode
+% - eventueel belangrijke versies PDF
+% - Resultaten experimenten (tekstformaat, bv CSV), transcripties interviews, enz. ALLE artefacten van je onderzoek!
+% - Broncode van zelf geschreven benchmarks, experimenten, proof-of-conceptcode, enz.
+% - werkdocumenten waar je opmaak nodig hebt, maar die niet dienen voor je bachproef (en waarvoor LaTeX overkill is: Markdown!
+% - Afbeeldingen die in de tekst zullen komen
+%
+% Wat komt NIET in Git
+% - Hulpbestanden aangemaakt bij het compileren van LaTeX
+% - Grote bestanden zoals ISO's, VMs, \ldots
+% - PDFs van gelezen artikels/ebooks
+% - Binaire bestanden die vaak veranderen
+% - Bestanden automatisch gegenereerd uit code in Git (bv. gecompileerde code)
 
 \section{Samenvatting}
 \label{sec:voorbereiding-samenvatting}
@@ -37,7 +77,7 @@ In de rest van deze gids gaan we er van uit dat je {\LaTeX} gebruikt. Het is nie
 De kernpunten van dit hoofdstuk zijn:
 
 \begin{itemize}
-  \item Gebruik een versiebeheersysteem om al je werk in op te slaan (Git is aanbevolen);
   \item Schrijf je tekst in {\LaTeX} in plaats van een klassieke tekstverwerker voor een strakke, professionele opmaak;
-  \item Gebruik een \emph{reference manager} voor het bijhouden van een bibliografische databank (JabRef of Mendeley zijn aanbevolen).
+  \item Gebruik een \emph{reference manager} voor het bijhouden van een bibliografische databank (JabRef is aanbevolen).
+  \item Gebruik een versiebeheersysteem om al je werk in op te slaan (Git is aanbevolen);
 \end{itemize}
