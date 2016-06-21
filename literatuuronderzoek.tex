@@ -3,7 +3,11 @@
 
 De eerste fase in elk onderzoek is typisch om een overzicht te schrijven van de huidige stand van zaken in het onderzoeksdomein. Daarvoor is het nodig om je te verdiepen in al wat er over het onderwerp al geschreven is. Dit is het literatuuronderzoek. In elk verslag over onderzoek is het essentieel dat je elke bewering die je doet ook kan aantonen. Dat kan ofwel op basis van data die je zelf op een methodologisch correcte manier verzameld en geanalyseerd hebt (maar dat komt verder in deze gids aan bod), ofwel aan de hand van refererenties naar \emph{gezaghebbende} publicaties.
 
-In dit hoofdstuk gaan we dieper in op dit onderwerp: wat bereik je precies met een literatuurstudie, hoe kan je er aan beginnen, hoe kan je de bronnen die je vindt gestructureerd bijhouden en op welke manier gebruik je die dan in je tekst.
+Dit hoofdstuk gaat dieper in op dit onderwerp: wat bereik je precies met een literatuurstudie, hoe kan je er aan beginnen, hoe kan je de bronnen die je vindt gestructureerd bijhouden en op welke manier gebruik je die dan in je tekst.
+
+De website van de Hogent bib heeft een heel interessante cursus over informatievaardigheden\footnote{\url{http://bib.hogent.be/cursus/overzicht/}} die je zeker eens moet doorgeven. Het is immers niet de bedoeling om in deze gids dezelfde inhoud te herhalen. Dit hoofdstuk spitst zich in de eerste plaats toe op literatuuronderzoek over een ict-gerelateerd onderwerp, en het correct opmaken van een referentielijst met {\LaTeX} en JabRef (zie Sectie~\ref{sec:bibliografische-databank}).
+
+% Neem opnieuw de cursus Onderzoekstechnieken bij de hand, in het bijzonder het lesmateriaal ivm LaTeX en rapporteren over onderzoek.
 
 \section{Doel van het literatuuronderzoek}
 \label{sec:doel-literatuuronderzoek}
@@ -20,19 +24,12 @@ In het kader van (toegepast) onderzoek kunnen we informatiebronnen ondeverdelen 
 \begin{description}
   \item[Primaire] kennis die je zelf vergaart tijdens je onderzoek. Bijvoorbeeld metingen uit experimenten, resultaten van enquêtes, transcripties van interviews, enz.
   \item[Secundaire] publicatie van kennis, onderzoek, enz.~door anderen. Bijvoorbeeld artikels in vaktijdschriften, boek, presentatie op een conferentie, enz.
-  \item[Tertiaire] zoekindexen en encyclopedieën. Bijvoorbeeld Google Scholar, Wikipedia, Web of Science, Elsevier ScienceDirect, Arxiv.org, enz.
+  \item[Tertiaire] zoekindexen en encyclopedieën. Bijvoorbeeld Google Scholar, Web of Science, Elsevier ScienceDirect, Arxiv.org, Wikipedia, about.com, Webopedia, enz.
 \end{description}
 
-Wanneer je in een tekst verwijst naar de literatuur, dan gaat het telkens over \emph{secundaire} bronnen. Dat betekent dat tertiaire bronnen \emph{niet} kunnen. Je mag dus bijvoorbeeld niet verwijzen naar een Wikipedia-artikel.
+Wanneer in een tekst verwezen wordt naar de literatuur, dan gaat het telkens over \emph{secundaire} bronnen (ook \emph{publicaties} genoemd). Dat betekent ook dat tertiaire bronnen \emph{niet} kunnen. Er mag dus bijvoorbeeld nooit verwezen worden naar een Wikipedia-artikel, woordenboeken, enz. Tertiaire bronnen zijn \emph{wel} het startpunt van de zoektocht naar geschikte publicaties (Zie Sectie~\ref{sec:op_zoek_naar_relevante_informatie}).
 
-%- Cursus informatievaardigheden HoGent bib
-%- bibliografische databank
-    %- BibTeX tips: {} voor familienaam en bedrijfsnaam; online bronnen; ...
-%- bronnen zoeken
-%- kwaliteit van bronnen evalueren
-  %- criteria
-  %- bronnen die zeker niet in aanmerking komen: Wikipedia (of andere encyclopedie), webpagina van onbekende auteur/publicatiedatum
-%- bronnen gebruiken en er naar verwijzen, toepassing in Mendeley en JabRef
+% XXX: subsectie? Soorten publicaties:
   %- Wetenschappelijk artikel
   %- Vaktijdschrift
   %- Boek
@@ -43,19 +40,34 @@ Wanneer je in een tekst verwijst naar de literatuur, dan gaat het telkens over \
   %- Handleiding software
   %- White paper
   %- Webpagina
-%- literatuurstudie schrijven
-  %- verwijzingen in de tekst
-  %- literatuurlijst
 
-% De eerste stap in het uitwerken van een bachelorproef is de literatuurstudie. Ik wil jullie graag herinneren aan enkele interessante informatiebronnen daarover:
+% XXX: subsectie? kwaliteit van bronnen evalueren, CRAP test
+  %- criteria
+  %- bronnen die zeker niet in aanmerking komen: Wikipedia (of andere encyclopedie), webpagina van onbekende auteur/publicatiedatum
+
+\section{Publicaties bijhouden in JabRef}
+\label{sec:publicaties_bijhouden_in_jabref}
+% Jabref intro, basisinstellingen
+% - Biblatex modus
+% - ID aanmaken
+% - Directory voor PDF's
 %
-% De HoGent bib heeft een {http://bib.hogent.be/cursus/overzicht/}{cursus informatievaardigheden} en een sectie over {http://bib.hogent.be/hoekanik/scripties/citeren/}{citeren en refereren}
-% Neem opnieuw de cursus Onderzoekstechnieken bij de hand, in het bijzonder het lesmateriaal ivm LaTeX en rapporteren over onderzoek.
-% Vergeet niet om al wat je vindt op te slaan in een bibliografische databank, bijvoorbeeld JabRef of Mendeley. Met zorg de nodige metadata over de gevonden bronnen opslaan neemt behoorlijk wat tijd in beslag, maar dit is de moeite waard.
+% Altijd verplichte velden: Auteur (of redacteur), titel, jaartal
+% - Hoe auteurs schrijven: Familienaam, voornaam and familienaam, voornaam and familienaam, voornaam\ldots
+% - Organisaties: {Naam van de organisatie}
 %
-% Goede startpunten voor het zoeken naar informatie:
+% Webpagina
+% - URL opgeven
+% - Datum van raadplegen
+% - Auteur en datum! (CRAP)
 %
-% Via de HoGent bib krijg je toegang tot een grote hoeveelheid wetenschappelijke en vakliteratuur die niet publiek beschikbaar zijn.
+% Boek
+% Journal
+%
+\section{Op zoek naar relevante informatie}
+\label{sec:op_zoek_naar_relevante_informatie}
+
+Via de HoGent bib krijg je toegang tot een grote hoeveelheid wetenschappelijke en vakliteratuur die niet publiek beschikbaar zijn.
 % Zoek naar scripties, thesissen, bachelorproeven van vorige jaren over je onderwerp. http://bib.hogent.be/zoeken/scripties-hogent/
 % Log in op Apollo (https://apollo.hogent.be/, via VPN) voor toegang tot databanken die niet publiek beschikbaar zijn. In het bijzonder Elsevier ScienceDirect, Springer Online Journals, en Web of Science zijn voor ons vakgebied het interessantst.
 % Vanuit Apollo kan je ook Google Scholar lanceren. Dat kan ook via het publieke internet, maar dan heb je geen toegang tot bepaalde bronnen. Scholar kent de abonnementen waar de bib op is ingeschreven en kan op die manier toegang geven tot artikels die niet publiek toegankelijk zijn.
@@ -66,3 +78,23 @@ Wanneer je in een tekst verwijst naar de literatuur, dan gaat het telkens over \
 % Ga op zoek naar presentaties op vakconferenties rond je onderwerp (vb. Google IO, WWDC, http://lanyrd.com/topics/android/, \ldots). Tegenwoordig worden vele conferenties gefilmd en achteraf gepubliceerd op Youtube of Vimeo
 % Er bestaan verschillende portaalsites voor actuele ict-gerelateerde onderwerpen waar technische artikels, presentaties, interviews, enz. op verschijnen, bv. dzone.com, infoq.com, enz.
 % Wie zijn de belangrijkste namen in de ``community''? Keynote-speakers op conferenties, auteurs van de belangrijkste boeken over het onderwerp, enz. Volg deze personen op Twitter, zoek uit of ze een blog hebben, actief zijn op LinkedIn, enz. Lees al wat je kan vinden dat ze geschreven hebben de laatste jaren.
+%
+% XXX: SECTIE: de literatuurstudie schrijven
+% Hoort misschien thuis in ``schrijven''???
+%
+% De literatuurstudie/state-of-the-art is een doorlopende tekst waarin je in je eigen woorden de situatie in het onderzoeksdomein schetst, met op gepaste plaatsen verwijzingen naar de literatuur. Expliciet schrijven ``in het artikel X van Y heb ik Z gelezen'' wordt niet gedaan. Lees een aantal wetenschappelijke publicaties over je onderwerp en probeer die stijl na te volgen.
+%
+% Wanneer verwijzen naar de literatuur:
+% - Elke introductie van domeinspecifieke vaktermen
+% - Elke bewering over het vakdomein (die je quantificeert!)
+% - Elke verwijzing naar resultaten vorig onderzoek
+%
+% Twee commando's: (Auteur, jaar) of Auteur (jaar)
+
+% TODO: samenvatting
+%
+% - Doelstelling literatuurstudie
+% - enkel secundaire bronnen/publicaties
+% - Gebruik JabRef en vul de juiste info in
+% - Ga op de juiste plaatsen op zoek naar informatie en doe de CRAP test bij elke bron
+% - Schrijf de literatuurstudie (typisch het inleidende hoofdstuk) als een doorlopende en samenhangende tekst waarin je in je eigen woorde de state-of-the-art in je onderzoeksdomein schetst. Verwijs op gepaste plaatsen naar de literatuur.
