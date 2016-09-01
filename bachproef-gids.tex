@@ -41,7 +41,10 @@
 
 
 %---------- Back matter -------------------------------------------------------
-\printbibliography
+% In de bibliografie niet de bronnen uit voorbeeld.bib afdrukken. Alle bronnen
+% in voorbeeld.bib moeten in het veld ``keywords'' ook de term ``voorbeeld''
+% bevatten.
+\printbibliography[notkeyword=voorbeeld]
 \addcontentsline{toc}{chapter}{\textcolor{maincolor}{\IfLanguageName{dutch}{Bibliografie}{Bibliography}}}
 
 \end{document}
