@@ -78,8 +78,8 @@ Een blog is meestal (een deel van) een persoonlijke website waar de auteur regel
 
 Ook hier is het belangrijk om te achterhalen wie de auteur is en welke autoriteit die heeft over het onderwerp. Wanneer je een artikel vindt over bijvoorbeeld ``continuous delivery'' van Martin Fowler, een wereldwijd erkend expert en spreker rond software-ontwikkeling, dan is dit heel bruikbaar als bron. Een artikel over hetzelfde onderwerp door een andere auteur die bijvoorbeeld na wat zoeken op LinkedIn een marketeer blijkt te zijn, neem je best niet op in je literatuurlijst.
 
-\subsubsection{De kwaliteit van bronnen beoordelen}
-\label{ssub:de-kwaliteit-van-bronnen-beoordelen}
+\subsection{De kwaliteit van bronnen beoordelen}
+\label{sub:de-kwaliteit-van-bronnen-beoordelen}
 
 Uit de voorgaande sectie zou je al moeten opgevallen zijn dat de kwaliteit van bronnen niet altijd makkelijk te evalueren is. Veel hangt af van wie de auteur is en welke autoriteit die heeft binnen het vakgebied.
 
@@ -99,9 +99,11 @@ Bij het beoordelen van een bron is het dan uiteraard noodzakelijk om te weten te
 \section{Publicaties bijhouden in JabRef}
 \label{sec:publicaties_bijhouden_in_jabref}
 
-Voordat je op zoek gaat naar informatie is het belangrijk om je eerst voor te bereiden om alle bronnen gestructureerd bij te houden zodat je ze later kan terugvinden en een bibliografie kan opstellen. Er bestaan verschillende applicaties die gespecialiseerd zijn in het bijhouden van een bibliografische databank, zgn. \emph{reference managers}.
+Voordat je op zoek gaat naar informatie is het belangrijk om je eerst voor te bereiden om alle bronnen gestructureerd bij te houden zodat je ze later kan terugvinden en een bibliografie kan opstellen. Bibliografieën moeten in een strak en vastgelegd formaat worden opgesteld. Er zijn veel verschillende bibliografiestijlen, maar op HoGent is er gekozen voor één, het APA-systeem (van de American Psychological Association)\footnote{\url{https://bib.hogent.be/how-to/bronnen-vermelden/refereren-volgens-apa6th/}}.
 
-HoGent stelt zelf Endnote voor, maar het nadeel is dat dit een commerciële applicatie is, waar je na je afstuderen geen toegang meer toe hebt. In deze sectie wordt Jabref voorgesteld, een open source applicatie voor het bijhouden van bibliografische gegevens, die bovendien ontwikkeld is specifiek voor {\LaTeX}. Het gebruikte bestandsformaat is Bib{\LaTeX}, dus je kan je bibliografische databank ook openen en bewerken met een teksteditor.
+Het is ondoenbaar om manueel een bibliografie en vermeldingen in de tekst bij te houden.  Gelukkig bestaan er verschillende applicaties die gespecialiseerd zijn in het bijhouden van een bibliografische databank, zgn. \emph{reference managers}.
+
+HoGent stelt zelf Endnote voor, maar het nadeel is dat dit een commerciële applicatie is, waar je na je afstuderen geen toegang meer toe hebt. In deze sectie wordt Jabref voorgesteld, een open source applicatie voor het bijhouden van bibliografische gegevens, die bovendien ontwikkeld is specifiek voor {\LaTeX}. JabRef gebruikt het bestandsformaat van Bib{\LaTeX}, het ingebouwde systeem voor bibliografieën.
 
 Als je meer gedetailleerde informatie over Bib{\LaTeX} nodig hebt die niet in deze gids te vinden is, raadpleeg dan de handleiding~\autocite{LehmanEtAl2016}.
 
@@ -128,7 +130,7 @@ Je kan de andere instellingen nakijken en eventueel naar wens aanpassen, maar de
 \subsection{Algemene bibliografische gegevens}
 \label{sub:algemene_bibliografische_gegevens}
 
-De bedoeling van een bibliografie is de lezer toelaten je bronnen zelf op te zoeken en te beoordelen op betrouwbaarheid. Dat betekent dat je voldoende informatie moet opgeven zodat de bron terug te vinden is. Afhankelijk van het soort bron (artikel in een journal, boek, website, enz.) moet je andere informatie opgeven. Dit wordt verderop uitgediept. Drie elementen zijn sowieso \emph{altijd} essentieel: de auteur, de titel van de bron en het jaar van publicatie. Als één van deze drie ontbreekt, wordt het bijzonder moeilijk om de oorsprong en de kwaliteit van de bron te evalueren. Dit soort bronnen kan je bijhouden ter info, maar zijn niet geschikt om op te nemen in een bibliografie. Als de auteur onbekend is, is het niet immers mogelijk om te beoordelen of die wel de autoriteit heeft om op een objectieve en diepgaande manier over het onderwerp te schrijven. Als het jaartal niet opgegeven is, is het erg moeilijk om na te gaan in hoeverre deze bron nog niet achterhaald is door recentere ontwikkelingen in het vakgebied.
+De bedoeling van een bibliografie is de lezer toelaten je bronnen zelf op te zoeken en te beoordelen op betrouwbaarheid. Dat betekent dat je voldoende informatie moet opgeven zodat de bron terug te vinden is. Afhankelijk van het soort bron (artikel in een journal, boek, website, enz.) moet je andere informatie opgeven. Dit wordt verderop uitgediept. Drie elementen zijn sowieso \emph{altijd} essentieel: de auteur, de titel van de bron en het jaar (of datum) van publicatie. Als één van deze drie ontbreekt, wordt het bijzonder moeilijk om de oorsprong en de kwaliteit van de bron te evalueren. Dit soort bronnen kan je bijhouden ter info, maar zijn niet geschikt om op te nemen in een bibliografie. Als de auteur onbekend is, is het niet immers mogelijk om te beoordelen of die wel de autoriteit heeft om op een objectieve en diepgaande manier over het onderwerp te schrijven. Als het jaartal niet opgegeven is, is het erg moeilijk om na te gaan in hoeverre deze bron nog niet achterhaald is door recentere ontwikkelingen in het vakgebied.
 
 Enkele tips bij het invullen van auteursnamen:
 
@@ -137,12 +139,12 @@ Enkele tips bij het invullen van auteursnamen:
   \item Als de auteur een bedrijf of organisatie is, met een naam bestaande uit verschillende woorden, zet die dan tussen accolades: bv. ``\{The Linux Foundation\}''. Zoniet probeert {\LaTeX} dit als een persoonsnaam te interpreteren. ``Foundation'' wordt dan de familienaam, ``The'' en ``Linux'' de twee voornamen.
   \item Als je meerdere auteurs hebt, scheid elke naam dan met \texttt{and}, bv. ``Bernard, Anita and Buysse, Jens and Van Vreckem, Bert''.
   \item Na invullen van de auteursna(a)m(en) klik je op de knop met het sleutel-icoon (zie Figuur~\ref{fig:jabref}) om een unieke sleutel te genereren voor deze bron.
-    % Author vs Editor
+  \item Naast een auteurveld is er ook een veld voor eventuele redacteur(en) (\emph{editor}) voorzien. Minstens één van de twee moet ingevuld zijn, soms allebei. Dit gebeurt bijvoorbeeld in een boek dat samengesteld is uit hoofdstukken die telkens door andere auteurs geschreven zijn en waar je naar één bepaald hoofdstuk wil verwijzen. Verderop vind je daar een voorbeeld van.
 \end{itemize}
 
 Merk trouwens op dat in een bibliografie \textbf{enkel werken mogen opgenomen zijn waarnaar verwezen wordt vanuit de tekst}. {\LaTeX} doet dit standaard automatisch, dus als je bronnen in de lijst mist, dan betekent dit dat je die niet in de tekst gebruikt hebt.
 
-Probeer telkens zoveel mogelijk informatie bij te houden over je bronnen, zodat het later makkelijker wordt die terug te vinden. Dit is een tijdrovend proces, en niet al deze informatie wordt ook in de bibliografie opgenomen. Het raadplegen van de databank wordt wel een stuk makkelijker. Heb hier voldoende aandacht voor en controleer ook goed het resultaat in de bibliografie zelf. Zijn de auteurs correct weergegeven? Heb je een jaartal? Enz.
+Probeer telkens zoveel mogelijk informatie bij te houden over je bronnen, zodat het later makkelijker wordt die terug te vinden. Dit is een tijdrovend proces, en niet al deze informatie wordt ook in de bibliografie opgenomen. Het raadplegen van de databank wordt wel een stuk makkelijker. Heb hier voldoende aandacht voor en controleer ook goed het resultaat in de bibliografie zelf. Zijn de auteurs correct weergegeven? Heb je een jaartal? Is er voor een online bron (zie verder) een URL en datum van raadplegen opgegeven? Enz.
 
 Enkele velden die zinvol zijn om altijd trachten in te vullen:
 
@@ -159,7 +161,7 @@ Enkele velden die zinvol zijn om altijd trachten in te vullen:
 \subsection{Specifieke bibliografische gegevens}
 \label{sub:specifieke_bibliografische_gegevens}
 
-In deze sectie wordt voor de meest interessante soorten bronnen uitgelegd hoe deze correct bij te houden en in de bibliografie op te nemen. JabRef geeft zelf al enige aanwijzingen over welke informatie minstens nodig is: in het detailvenster (zie Afbeelding~\ref{fig:jabref}) moet je minstens het tabblad ``Required fields'' invullen. Voor elke soort publicatie (zie Sectie~\ref{sub:publicatievormen}) vind je verderop een overzicht van de in te vullen velden en wat die precies betekenen, en hoe de referentie in de literatuurlijst er uit zal zien.
+In deze sectie wordt voor de meest relevante soorten bronnen uitgelegd hoe deze correct bij te houden en in de bibliografie op te nemen. JabRef geeft zelf al enige aanwijzingen over welke informatie minstens nodig is: in het detailvenster (zie Afbeelding~\ref{fig:jabref}) moet je minstens het tabblad ``Required fields'' invullen. Voor elke soort publicatie (zie Sectie~\ref{sub:publicatievormen}) vind je verderop een overzicht van de in te vullen velden en wat die precies betekenen, en hoe de referentie in de literatuurlijst er uit zal zien.
 
 Bij het toevoegen van een nieuwe bron aan een bibliografische databank moet je eerst het type selecteren (zie Afbeelding~\ref{fig:jabref-entrytypes}). Hieronder bespreken we enkel de belangrijkste die relevant zijn voor een bachelorproef.
 
@@ -222,6 +224,7 @@ Daarnaast kan je optioneel ook volgende velden invullen:
 \begin{description}
   \item[URL] naar de website van de conferentie waar het artikel kan gevonden (eventueel rechtstreeks naar de pdf);
   \item[Urldate] datum waarop je deze bron het laatst geraadpleegd hebt.
+  \item[DOI] op voorwaarde dat er één toegewezen is aan dit artikel.
 \end{description}
 
 Voorbeeld:
@@ -245,6 +248,54 @@ Voorbeeld:
 
 In de bibliografie: \fullcitebib{VanVreckemEtAl2013}
 
+\paragraph{InBook}
+
+Dit type gebruik je als je wil verwijzen naar een specifiek hoofdstuk in een boek. Minstens volgende velden moeten dan ingevuld zijn:
+
+\begin{description}
+  \item[Author] De auteur(s) van het hoofdstuk,
+  \item[Editor] De redacteur(en) van het boek (indien van toepassing),
+  \item[Year] Jaartal waarin het boek werd uitgegeven,
+  \item[Title] Titel van het \emph{hoofdstuk},
+  \item[Pages] Begin- en eindpagina van het hoofdstuk,
+  \item[Booktitle] Titel van het \emph{boek},
+  \item[Publisher] Naam van de uitgeverij.
+\end{description}
+
+Optioneel kan je ook volgende informatie aanvullen:
+
+\begin{description}
+  \item[Subtitle of Booksubtitle] ondertitel van het hoofdstuk of boek, resp.,
+  \item[Edition] Nummer van de uitgave,
+  \item[Location] Stad waar de uitgeverij gevestigd is,
+  \item[ISBN] Het ISBN-nummer van het boek (ter info, wordt nooit getoond in de bibliografie).
+\end{description}
+
+Bij een boek is het ongebruikelijk om een URL op te geven. Als je bijvoorbeeld ter info voor jezelf de URL van het boek op de website van de uitgever wil bijhouden, doe je dit best in een ander veld, bv. Comment of Review.
+
+Voorbeeld
+\begin{verbatim}
+@InBook{Meyr2008,
+  author       = {Meyr, Herbert},
+  title        = {Forecast Methods},
+  booktitle    = {Supply Chain Management and Advanced Planning},
+  year         = {2008},
+  editor       = {Stadtler, Hartmut and Kilger, Christoph},
+  booksubtitle = {Concepts, Models, Software, and Case Studies},
+  edition      = {4e editie},
+  publisher    = {Springer},
+  location     = {Heidelberg},
+  isbn         = {978-3-540-24814-9},
+  pages        = {461--472},
+  comment      = {https://www.springer.com/us/book/9783540248149},
+  owner        = {bert},
+  timestamp    = {2016-09-02},
+}
+\end{verbatim}
+
+
+In de bibliografie: \fullcitebib{Meyr2008}
+
 %% TODO: boek, thesis, manual, \ldots
 
 \paragraph{Electronic of Online}
@@ -258,7 +309,7 @@ Deze velden moet je verplicht invullen:
 \begin{description}
   \item[Author] Auteur(s) van de bron, spreker (in het geval van een video van een lezing op een conferentie), \ldots
   \item[Title] Titel van de bron, lezing, \ldots
-  \item[Year] Jaartal van publicatie (of eventueel \textbf{date}, de dag van publicatie, als die bekend is),
+  \item[Year] Jaartal van publicatie (of eventueel \textbf{Date}, de dag van publicatie, als die bekend is),
   \item[URL] naar de website waar de bron kan teruggevonden worden,
   \item[Urldate] Datum van laatste raadplegen,
 \end{description}
@@ -271,7 +322,6 @@ Voorbeeld van een blogartikel:
 @Electronic{LewisFowler2014,
   author    = {Lewis, James and Fowler, Martin},
   title     = {Microservices: a definition of this new architectural term},
-  year      = {2014},
   date      = {2014-03-25},
   url       = {http://martinfowler.com/articles/microservices.html},
   urldate   = {2016-09-01},
@@ -290,7 +340,7 @@ Een ander voorbeeld, deze keer van een presentatie op een vakconferentie die op 
 @Online{Hykes2013,
   author       = {Solomon Hykes},
   title        = {The future of Linux Containers (PyCon 2013)},
-  year         = {2013-03-21},
+  date         = {2013-03-21},
   url          = {https://www.youtube.com/watch?v=wW9CAH9nSLs},
   urldate      = {2016-09-01},
   abstract     = {At PyCon Solomon Hykes shows docker to the public for the
